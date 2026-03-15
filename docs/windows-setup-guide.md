@@ -317,7 +317,7 @@ taskkill /PID <PID> /F
 **Solution**: Add exclusions (improves performance by ~40%)
 ```powershell
 # Run as Administrator
-Add-MpPreference -ExclusionPath "C:\roshan\yc-agentframework\hive"
+Add-MpPreference -ExclusionPath "C:\path\to\hive"
 Add-MpPreference -ExclusionPath "$env:LOCALAPPDATA\uv"
 ```
 
@@ -346,7 +346,7 @@ To use `hive` command from anywhere:
 1. Add hive directory to PATH:
    ```powershell
    # Temporary (current session)
-   $env:Path += ";C:\roshan\yc-agentframework\hive"
+   $env:Path += ";C:\path\to\hive"
    
    # Permanent (via GUI - see Step 2 above)
    ```
@@ -354,7 +354,7 @@ To use `hive` command from anywhere:
 2. Create a `hive.cmd` wrapper:
    ```cmd
    @echo off
-   powershell -ExecutionPolicy Bypass -File "C:\roshan\yc-agentframework\hive\hive.ps1" %*
+   powershell -ExecutionPolicy Bypass -File "C:\path\to\hive\hive.ps1" %*
    ```
 
 ---
@@ -402,8 +402,8 @@ Add these paths to Windows Defender exclusions for ~40% faster performance:
 
 ```powershell
 # Run PowerShell as Administrator
-Add-MpPreference -ExclusionPath "C:\roshan\yc-agentframework\hive"
-Add-MpPreference -ExclusionPath "C:\roshan\yc-agentframework\hive\.venv"
+Add-MpPreference -ExclusionPath "C:\path\to\hive"
+Add-MpPreference -ExclusionPath "C:\path\to\hive\.venv"
 Add-MpPreference -ExclusionPath "$env:LOCALAPPDATA\uv"
 ```
 
@@ -450,7 +450,7 @@ Based on your actual experience, here's what worked:
 
 ```powershell
 # 1. Cloned repo
-git clone https://github.com/itsroshanharry/hive
+git clone https://github.com/adenhq/hive
 cd hive
 
 # 2. Installed core framework
