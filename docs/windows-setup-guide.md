@@ -43,9 +43,9 @@ You have three options for running Hive on Windows:
 
 | Shell | Pros | Cons | Recommended For |
 |-------|------|------|-----------------|
-| **PowerShell** | Native Windows, no extra install | Some scripts need adaptation | Most Windows users |
+| **PowerShell** | Native Windows, no extra install, works perfectly | None found in testing | Most Windows users |
 | **Git Bash** | Unix-like commands | PATH issues with Python | Users familiar with Linux |
-| **WSL** | Full Linux environment | Requires Windows 10+ | Advanced users |
+| **WSL** | Full Linux environment | Extra setup required, Windows 10+ only | Advanced users who need Linux tools |
 
 **This guide focuses on PowerShell** (easiest option).
 
